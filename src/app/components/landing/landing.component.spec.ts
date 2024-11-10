@@ -1,0 +1,22 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MenubarModule } from 'primeng/menubar';
+
+import { LandingComponent } from './landing.component';
+
+describe('LandingComponent', () => {
+  let component: LandingComponent;
+  let fixture: ComponentFixture<LandingComponent>;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [LandingComponent]
+    });
+    fixture = TestBed.createComponent(LandingComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

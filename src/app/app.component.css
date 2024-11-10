@@ -1,0 +1,9 @@
+.background-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    background-image: url('/assets/Ellipse2.png'), url('/assets/Ellipse1.png');
+    background-position: left 50%, right 10%;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100%, 80%; 
+}

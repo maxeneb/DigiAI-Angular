@@ -1,0 +1,60 @@
+<!-- <p-menubar [model]="items" class="top-nav"></p-menubar> -->
+
+<p-menubar [model]="items">
+    <ng-template pTemplate="start">
+      <img src="/assets/logo.png" height="40" class="p-mr-2" alt="brand logo">
+    </ng-template>
+    <ng-template pTemplate="end">
+        <span style="margin-right: 30px;">Home</span>
+        <span style="margin-right: 30px;">About</span>
+        <!-- <a routerLink="/login"> -->
+            <span style="margin-right: 30px">Logout</span>
+        <!-- </a> -->
+    </ng-template>
+  </p-menubar>
+<div class="w-container-my-transparent-container">
+    <div class="grid grid-nogutter text-800">
+        
+        <div class="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center ">
+            <section>
+                <span class="block text-6xl font-bold mb-1">Using AI</span>
+                <div class="text-6xl custom-text-color font-bold mb-3">to Identify AI-rt</div>
+                <p class="mt-0 mb-4 text-700 font-bold custom-text-color2 line-height-3">Where creativity meets algorithms...</p>
+
+                <div class="button-container">
+                    <p-fileUpload 
+                      mode="basic" 
+                      chooseLabel="Choose" 
+                      chooseIcon="pi pi-upload"
+                      name="demo[]" 
+                      url="https://www.primefaces.org/cdn/api/upload.php" 
+                      accept="image/*" 
+                      [maxFileSize]="1000000" 
+                      [auto]="true" 
+                      (onUpload)="onFileSelect($event)" 
+                      chooseLabel="Upload"/>
+                      <p-button label="Predict" class="submitButton" type="submit" severity="danger" *ngIf="imageUrl" (click)="uploadFile()"></p-button>
+                </div>
+                
+            </section>
+        </div>
+        <div class="md:col-6 p-6 text-center md:text-left flex align-items-center">
+            <img *ngIf="imageUrl" [src]="imageUrl" alt="Uploaded Image" />          
+        </div>
+        
+    </div>
+
+<p-fieldset [toggleable]="false" *ngIf="showResults">
+    <ng-template pTemplate="header">
+        <div>
+            <p-avatar 
+                image="/assets/logosmall2.png" 
+            />
+            <!-- <span class="font-bold">Result</span> -->
+        </div>
+    </ng-template>
+    <p class="result-message custom-text-color2" *ngIf="resultMessage">
+            {{ resultMessage }}
+    </p>
+</p-fieldset>
+

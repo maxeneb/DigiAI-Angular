@@ -1,0 +1,42 @@
+@import "~primeng/resources/themes/saga-blue/theme.css";
+@import "~primeng/resources/primeng.min.css";
+@import "~primeicons/primeicons.css";
+
+/* Set the theme to dark */
+:root {
+  --angular-material-theme: saga-blue-dark;
+}
+
+.p-menubar.p-menuitem-link {
+  color: #ccc; /* Lighter text for better visibility */
+}
+
+.p-menubar.p-menuitem-icon {
+  filter: invert(1); /* Invert icon colors for dark mode */
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+p-menubar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; 
+  height: 10px;
+  background-color: white;
+}
+
+h4{
+  margin-bottom: -10px;
+  text-align: center;
+  text-decoration: italic;
+}
+
+
+  

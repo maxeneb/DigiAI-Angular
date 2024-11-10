@@ -1,0 +1,59 @@
+.w-container-my-transparent-container {
+  width: 110vh;
+  background-color: transparent !important;
+}
+p-menubar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; 
+  height: 10px;
+  background-color: white;
+}
+
+.logo {
+  content: '';
+  display: inline-block;
+  height: 5px; 
+  width: 5px;
+}
+.custom-text-color {
+  color: #4C3AAD;
+}
+.custom-text-color2 {
+  color: #202B23;
+}
+.w-full {
+  margin-top: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+
+.button-container > * {
+  margin: 0; 
+}
+
+.submitButton{
+  width: 200px;
+}
+
+.result-message {
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.p-fieldset-legend-text {
+  background-color: transparent;
+}
+
+.transparent-header {
+  background-color: transparent;
+}
+
+  
